@@ -8,6 +8,140 @@
         console.log("My first code")
         // We can use this code in console for change h1 :
         // document.body.innerHTML = "<h1>Hacker</h1>" 
+        
+        // Case Sensitivity:
+        let message = "Hi";
+        let Message = "Hello";
+        console.log(message); // Output: Hi
+        console.log(Message); // Output: Hell
+
+        // camelCase, snake_case, UPPER_CASE:
+        let userName = "Aydin"; // camelCase, meaningful
+        let user_name = "Sch"; // snake_case, less common
+        const MAX_SIZE = 19; // UPPER_CASE for constants
+        console.log(userName, user_name, MAX_SIZE); // Output: Alice Bob 100
+
+        // Redefinition, Reassignment:
+        var score = 10; // Initial declaration and assignment
+        var score = 20; // Redeclare, no problem
+        score = 30; // Reassign, no problem
+        console.log(score); // Output: 30
+
+        // Hoisting, Scope:
+        showWelcome(); // Welcome to my site!
+        var user = "Ali";
+        console.log(user); // Ali
+        function showWelcome() {
+            console.log("Welcome to my site!");
+        };
+
+        // let:
+        let points = 50; // Initial declaration
+        // let points = 60; // Error: Identifier 'points' has already been declared
+        points = 70; // Reassign, no problem
+        console.log(points); // Output: 70
+
+        // const:
+        const PI = 3.14; // Define a constant
+        // PI = 3.1415; // Error: Assignment to constant variable
+        console.log(PI); // Output: 3.14
+
+        // Global Variables:
+        x = 5; // Global variable
+        console.log(window.x); // Output: 5 (in browser)
+        console.log(x); // Output: 5
+        // "global variables cause an attack {prototyp pollution}"
+    
+        // local VS global:
+        var globalVar = "I'm global"; // Global variable
+        function testScope() {
+        var localVar = "I'm local"; // Local variable
+        console.log(globalVar); // Access global variable
+        console.log(localVar); // Access local variable
+        }
+        testScope();
+        console.log(globalVar); // Output: I'm global
+        //console.log(localVar); // Error: localVar is not defined
+
+        // variable naming rules:
+        let myVar = 1; // OK
+        let _secret = 2; // OK
+        let $elem = 3; // OK
+        //let 1var = 4; // Error: Invalid variable name
+
+        let x = 1, y = 2, z = 3; // Declare multiple variables
+        console.log(x, y, z); // Output: 1 2 3
+
+        // undefined VS undeclared:
+            // undefined ==> let x; // Declare without value console.log(x); // Output: undefined
+            // undeclared ==> console.log(b); // Error: b is not defined
+
+        // string:
+        let text = "Hello"; // String with double quotes
+        let greeting = 'Hi'; // String with single quotes
+        let multiLine = `Line 1
+        Line 2`; // Template literal for multi-line
+        let name = "Alice";
+        let welcome = `Hello ${name}!`; // Interpolation with template literal
+        console.log(text.length); // Output: 5 (length of "Hello")
+        console.log(welcome); // Output: Hello Alice!
+        console.log(multiLine); // Output: Line 1\nLine 2
+    
+        // number:
+        let integer = 42; // Integer number
+        let float = 3.14; // Floating-point number
+        console.log(Number.MAX_SAFE_INTEGER); // Output: 9007199254740991
+        console.log(integer + float); // Output: 45.14
+    
+        // Symbol:
+        let user = {}; // Empty object
+        let id1 = Symbol("id"); // Create a symbol
+        let id2 = Symbol("id"); // Another symbol with same description
+        user[id1] = "user1"; // Add property with symbol key
+        user[id2] = "user2"; // Add another property
+        console.log(user[id1], user[id2]); // Output: user1 user2
+        console.log(id1 === id2); // Output: false
+
+        // BigInt:
+        let bigNumber = 12345678901234567890n; // BigInt
+        console.log(bigNumber + 1n); // Output: 12345678901234567891n
+
+        // Object:
+        let user = { name: "Alice", age: 30 }; // Define an object
+        console.log(user.name); // Output: Alice
+        user.age = 31; // Change property
+        console.log(user); // Output: { name: "Alice", age: 31 }
+
+        // typeof:
+        console.log(typeof "Hello"); // Output: string
+        console.log(typeof 42); // Output: number
+        console.log(typeof true); // Output: boolean
+        console.log(typeof null); // Output: object (bug!)
+        console.log(typeof undefined); // Output: undefined
+        console.log(typeof { name: "Alice" }); // Output: object
+        console.log(typeof Symbol("id")); // Output: symbol
+        console.log(typeof 123n); // Output: bigint
+
+        // if & else:
+        let age = 20; // Define age
+        if (age >= 18) {
+        console.log("You are an adult"); // Run if condition is true
+        } else {
+        console.log("You are a minor"); // Run if condition is false
+        }
+        // EX:
+        let score = 85; // Define score
+        if (score >= 90) {
+        console.log("A"); // Run if score >= 90
+        } else if (score >= 80) {
+        console.log("B"); // Run if score >= 80
+        } else if (score >= 70) {
+        console.log("C"); // Run if score >= 70
+        } else {
+        console.log("D or below"); // Run if none of the above
+        }
+
+        
     </script>
 </body>
 </html>
