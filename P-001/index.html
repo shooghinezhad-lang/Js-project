@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت وظایف - اولین پروژه جاوااسکریپت</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 لیست وظایف من</h1>
+        
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="یک وظیفه جدید بنویسید...">
+            <button id="addBtn">➕ اضافه کن</button>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="completed">انجام شده</button>
+            <button class="filter-btn" data-filter="pending">انجام نشده</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div class="task-stats">
+            <span>تعداد کل: <span id="totalTasks">0</span></span>
+            <span>انجام شده: <span id="completedTasks">0</span></span>
+            <span>انجام نشده: <span id="pendingTasks">0</span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
